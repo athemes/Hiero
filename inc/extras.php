@@ -74,7 +74,7 @@ add_filter( 'excerpt_more', 'athemes_auto_excerpt_more' );
  * Returns a "Continue Reading" link for excerpts
  */
 function athemes_continue_reading_link() {
-	return ' <a href="'. esc_url( get_permalink() ) . '" class="more-link">' . __( 'Continue Reading <span class="meta-nav">&rarr;</span>', 'hiero' ) . '</a>';
+	return ' <a href="'. esc_url( get_permalink() ) . '" class="more-link">' . __( 'Continue Reading', 'hiero' ) . ' <span class="meta-nav">&rarr;</span></a>';
 }
 
 /**
