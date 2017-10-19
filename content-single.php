@@ -44,15 +44,15 @@
 			if ( ! athemes_categorized_blog() ) {
 				// This blog only has 1 category so we just need to worry about tags in the meta text
 				if ( '' != $tag_list ) {
-					$meta_text = __( '<span class="tags-links"><i class="ico-tags"></i> %2$s</span>', 'hiero' );
+					$meta_text = '<span class="tags-links"><i class="ico-tags"></i> %2$s</span>';
 				}
 
 			} else {
 				// But this blog has loads of categories so we should probably display them here
 				if ( '' != $tag_list ) {
-					$meta_text = __( '<span class="cat-links"><i class="ico-folder"></i> %1$s</span><span class="tags-links"><i class="ico-tags"></i> %2$s</span>', 'hiero' );
+					$meta_text = '<span class="cat-links"><i class="ico-folder"></i> %1$s</span><span class="tags-links"><i class="ico-tags"></i> %2$s</span>';
 				} else {
-					$meta_text = __( '<span class="cat-links"><i class="ico-folder"></i> %1$s</span>', 'hiero' );
+					$meta_text = '<span class="cat-links"><i class="ico-folder"></i> %1$s</span>';
 				}
 
 			} // end check for categories on this blog
