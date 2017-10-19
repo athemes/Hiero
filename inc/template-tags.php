@@ -35,17 +35,17 @@ function athemes_content_nav( $nav_id ) {
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
-		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '<i class="ico-left-open"></i>', 'Previous post link', 'hiero' ) . '</span> %title' ); ?>
-		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '<i class="ico-right-open"></i>', 'Next post link', 'hiero' ) . '</span>' ); ?>
+		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav"><i class="ico-left-open"></i></span> %title' ); ?>
+		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav"><i class="ico-right-open"></i></span>' ); ?>
 
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 		<?php if ( get_next_posts_link() ) : ?>
-		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav"><i class="ico-left-open"></i></span> Older Articles', 'hiero' ) ); ?></div>
+		<div class="nav-previous"><?php next_posts_link( '<span class="meta-nav"><i class="ico-left-open"></i></span> ' . __( 'Older Articles', 'hiero' ) ); ?></div>
 		<?php endif; ?>
 
 		<?php if ( get_previous_posts_link() ) : ?>
-		<div class="nav-next"><?php previous_posts_link( __( 'Newer Articles <span class="meta-nav"><i class="ico-right-open"></i></span>', 'hiero' ) ); ?></div>
+		<div class="nav-next"><?php previous_posts_link( __( 'Newer Articles', 'hiero' ) . ' <span class="meta-nav"><i class="ico-right-open"></i></span>' ); ?></div>
 		<?php endif; ?>
 
 	<?php endif; ?>
@@ -86,12 +86,12 @@ function athemes_comment( $comment, $args, $depth ) {
 					<div class="comment-metadata">
 						<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 							<time datetime="<?php comment_time( 'c' ); ?>">
-								<?php printf( _x( '%1$s', '1: date, 2: time', 'hiero' ), get_comment_date(), get_comment_time() ); ?>
+								<?php printf( '%1$s', get_comment_date(), get_comment_time() ); ?>
 							</time>
 						</a>
 					</div><!-- .comment-metadata -->
 
-					<?php printf( __( '%s', 'hiero' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+					<?php printf( '<cite class="fn">%s</cite>', get_comment_author_link() ); ?>
 				</div><!-- .comment-author -->
 
 				<?php if ( '0' == $comment->comment_approved ) : ?>
