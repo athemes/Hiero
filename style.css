@@ -339,6 +339,9 @@ object {
 #main-navigation .sf-menu {
 	background: #060608;
 	}
+#main-navigation > .sf-menu > ul {
+	z-index: 9;
+	}
 #main-navigation .sf-menu > ul > li:after {
 	width: 1px;
 	float: left;
