@@ -1204,3 +1204,11 @@ body.search .page .entry-footer {
 	}
 @media screen and (max-width: 320px) {
 	}
+
+/* Bootstrap "span" word bug workaround begin */
+[class*="span"] {
+    float: unset;
+    min-height: unset;
+    margin-left: unset;
+}
+/* Bootstrap "span" word bug workaround end */
