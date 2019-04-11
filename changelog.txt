@@ -1,5 +1,12 @@
 Changelog
 
+Hiero 1.8.1 - 10 Apr 2019
+-----------------------------
+- updated links to get rid of http://
+- Elementor and mobile menu incompatibility fix
+- Bootstrap "span" word bug workaround
+- Increased default font size a little bit
+
 Hiero 1.8 - 11 Oct 2017
 -----------------------------
 - changed Text Domain from athemes to hiero;
